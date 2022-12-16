@@ -3,15 +3,21 @@
 ROS zdepth image transport plugin
 
 `zdepth_image_transport` is for faster and lighter depth compression.
+
 [Zdepth](https://github.com/catid/Zdepth) is a depth compression method with zstd library.
 
-## Comparison 
+## How to try
 
-### ZDepth (This repo) 
+```
+roslaunch openni2 openni2.launch
+rosrun image_transport republish zdepth in:=/camera/depth/image_raw raw out:=/camera/depth_decompressed/image_raw raw
+```
 
-With Zdepth, we can get 30Hz rgb and 30Hz Zdepth.
-~Zdepth's decompression is 7Hz, so the visualization seems a bit slow, but faster than compressedDepth (png).~
-Now we got 30Hz for decompression, too.
+## Visual Comparison 
+
+### ZDepth (This repo)
+
+With zdepth_image_transport, we can get 30Hz rgb and 30Hz Zdepth.
 
 Left: Original, Right: compressed -> decompressed
 
@@ -29,21 +35,6 @@ Left: Original, Right: compressed -> decompressed
 
 https://user-images.githubusercontent.com/9300063/199556980-136d74a3-0a09-4df1-9e8e-354b7b65463f.mp4
 
-
-## How to try
-
-```
-roslaunch openni2 openni2.launch
-rosrun image_transport republish zdepth in:=/camera/depth/image_raw raw out:=/camera/depth_decompressed/image_raw raw
-```
-
-## Topic size comparison
-
-- ZDepth: `<array type: uint8, length: 35006>`
-- compressedDepth (png): `<array type: uint8, length: 61084>`
-
-- Original: `<array type: uint8, length: 614400>`
-
 ## Frequency Comparison
 
 ### Compression
@@ -58,6 +49,7 @@ average rate: 29.973
 ```
 
 - Compressed Depth (png)
+
 ```
 $ rostopic hz /camera/depth/image_raw/compressedDepth
 subscribed to [/camera/depth/image_raw/compressedDepth]
@@ -85,3 +77,10 @@ subscribed to [/camera/depth_decompressed/image_raw]
 average rate: 4.175
         min: 0.233s max: 0.244s std dev: 0.00462s window: 4
 ```
+
+## Topic size Comparison
+
+- Original: `<array type: uint8, length: 614400>`
+
+- ZDepth: `<array type: uint8, length: 35006>`
+- compressedDepth (png): `<array type: uint8, length: 61084>`
