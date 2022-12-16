@@ -12,15 +12,19 @@ jobs:
           - ROS_DISTRO: melodic
             ROS_REPO: testing
             CMAKE_ARGS: '-DCMAKE_BUILD_TYPE=Debug'
+            ADDITIONAL_DEBS: 'git'
           - ROS_DISTRO: melodic
             ROS_REPO: testing
             CMAKE_ARGS: '-DCMAKE_BUILD_TYPE=Release'
+            ADDITIONAL_DEBS: 'git'
           - ROS_DISTRO: noetic
             ROS_REPO: testing
             CMAKE_ARGS: '-DCMAKE_BUILD_TYPE=Debug'
+            ADDITIONAL_DEBS: 'git'
           - ROS_DISTRO: noetic
             ROS_REPO: testing
             CMAKE_ARGS: '-DCMAKE_BUILD_TYPE=Release'
+            ADDITIONAL_DEBS: 'git'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
