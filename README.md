@@ -1,5 +1,7 @@
 # zdepth_image_transport
 
+[![CI](https://github.com/knorth55/zdepth_image_transport/actions/workflows/main.yml/badge.svg)](https://github.com/knorth55/zdepth_image_transport/actions/workflows/main.yml)
+
 ROS zdepth image transport plugin
 
 `zdepth_image_transport` is for faster and lighter depth compression.
