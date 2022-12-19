@@ -69,3 +69,12 @@ install(DIRECTORY include/${PROJECT_NAME}/
 install(FILES zdepth_plugins.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
+
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  find_package(roslint REQUIRED)
+  find_package(rostest REQUIRED)
+  add_rostest(test/zdepth_image_transport.test)
+  roslaunch_add_file_check(test/zdepth_image_transport.test)
+endif()
