@@ -6,7 +6,7 @@ ROS zdepth image transport plugin
 
 [Zdepth](https://github.com/catid/Zdepth) is a depth compression method with zstd library.
 
-## Note
+## Supported format
 
 Currently supported formats are as below:
 - [x] `16UC1`
