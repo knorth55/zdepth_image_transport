@@ -1,0 +1,4 @@
+- git:
+    local-name: knorth55/depth_image_publisher
+    uri: https://github.com/knorth55/depth_image_publisher.git
+    version: main
