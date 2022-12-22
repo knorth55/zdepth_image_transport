@@ -12,7 +12,7 @@ ROS zdepth image transport plugin
 
 Currently supported formats are as below:
 - [x] `16UC1`
-- [ ] `32FC1`
+- [x] `32FC1`
 
 ## How to try
 
