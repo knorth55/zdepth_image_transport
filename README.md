@@ -1,4 +1,4 @@
-# This project is merged to https://github.com/jsk-ros-pkg/jsk_3rdparty
+# This project is merged to [jsk-ros-pkg/jsk_3rdparty](https://github.com/jsk-ros-pkg/jsk_3rdparty).
 
 # zdepth_image_transport
 
