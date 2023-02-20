@@ -1,3 +1,5 @@
+# This project is merged to https://github.com/jsk-ros-pkg/jsk_3rdparty
+
 # zdepth_image_transport
 
 [![CI](https://github.com/knorth55/zdepth_image_transport/actions/workflows/main.yml/badge.svg)](https://github.com/knorth55/zdepth_image_transport/actions/workflows/main.yml)
